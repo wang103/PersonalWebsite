@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul {list-style-type:none;margin:0;padding:0;overflow:hidden}
+li{float:left;}
+#nav_item {
+	display:block;
+	width:240px;
+	font-weight:bold;
+	color:#FFF;
+	background-color:#000;
+	text-align:center;
+	padding:5px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+#nav_item:hover,#nav_item:active {
+background-color:#7A991A;
+}
+
+body {background-color:#999;}
+p {color:black;font-size:120%}
+img {margin-right:10px;}
