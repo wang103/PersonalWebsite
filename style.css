@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+#container {
+	margin: auto;
+    width: 1000px;
+}
+
 ul {list-style-type:none;margin:0;padding:0;overflow:hidden}
 li{float:left;}
 #nav_item {
@@ -15,9 +20,16 @@ li{float:left;}
 	text-transform:uppercase;
 }
 #nav_item:hover,#nav_item:active {
-background-color:#7A991A;
+background-color:#09F;
 }
 
 body {background-color:#999;}
 p {color:black;font-size:120%}
 img {margin-right:10px;}
+
+#footer {
+	color:#FFF;
+	background-color:#000;
+	clear:both;
+	text-align:center;
+}
