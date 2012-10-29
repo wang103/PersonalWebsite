@@ -20,12 +20,32 @@ li{float:left;}
 	text-transform:uppercase;
 }
 #nav_item:hover,#nav_item:active {
-background-color:#09F;
+	background-color:#09F;
 }
 
-body {background-color:#999;}
+body {background-color:#CCC;}
 p {color:black;font-size:120%}
 img {margin-right:10px;}
+
+#blog_left {
+	width:80%;
+	float:left;
+}
+#blog_right {
+	width:20%;
+	float:right;
+}
+#login_label {
+	width:40%;
+	float:left;
+}
+#login_input {
+	width:55%;
+	float:right;
+}
+#login_p {
+	height:12px;
+}
 
 #footer {
 	color:#FFF;
