@@ -1,3 +1,3 @@
 <?php
-echo "Coming soon";
+echo "Blog is coming soon";
 ?>
