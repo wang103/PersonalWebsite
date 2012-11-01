@@ -47,7 +47,7 @@ if(isset($_SESSION['IS_ADMIN']) && !empty($_SESSION['IS_ADMIN'])) {
 <p>
 Title: <input type="text" name="title" required/><br>
 Content:<br>
-<input type="text" name="content" required/><br>
+<textarea rows="6" cols="60"></textarea><br>
 <input type="submit" value="Submit"/><br>
 </p>
 </form>';
