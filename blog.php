@@ -50,10 +50,16 @@ Content:<br>
 </div>
 
 <div id="blog_right">
-<form name="login_form" action="php/login.php" method="get">
-<p id="login_p"><label id="login_label">User: </label> <input id="login_input" type="text" name="user" required></p>
-<p id="login_p"><label id="login_label">Password:</label> <input id="login_input" type="password" name="pwd" required></p>
-<p id="login_p" align="center"><input type="submit" value="Submit"></p>
+<form name="login_form" action="php/login.php" method="post">
+<p id="login_p">
+<label id="login_label">User: </label> <input id="login_input" type="text" name="user" required>
+</p>
+<p id="login_p">
+<label id="login_label">Password:</label> <input id="login_input" type="password" name="pwd" required>
+</p>
+<p id="login_p" align="center">
+<input type="submit" value="Submit">
+</p>
 </form>
 </div>
 
