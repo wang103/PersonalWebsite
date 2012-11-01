@@ -1,5 +1,5 @@
 <?php
-//Start session
+# Start session
 session_start();
 
 $con = mysql_connect('50.63.108.129', 'TianyiBlog', 'Progr001!');
@@ -16,7 +16,7 @@ if(!get_magic_quotes_gpc()) {
 }
 
 # Check against the DB.
-$qry = "SELECT UserName,IsAdmin FROM User WHERE UserName='$user' AND passwd='" . md5($_POST['pwd']) . "'";
+$qry = "SELECT UserName,IsAdmin FROM User WHERE UserName='" . $user . "' AND Password='" . md5($_POST['pwd']) . "'";
 $login_result = mysql_query($qry);
 
 # Store authentication in session.
@@ -33,7 +33,7 @@ if(mysql_num_rows($login_result) > 0) {
 	# Write session to disc
     session_write_close();
 	
-    header("location: blog.php");
+    header("location: ../blog.php");
     exit();
 } else {
 	# Login failed

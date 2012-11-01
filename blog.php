@@ -41,10 +41,10 @@ mysql_close($con);
 <!--If admin, set up the new blog entry-->
 <form action="php/insert_blog.php" method="post">
 <p>
-Title: <input type="text" name="title" /><br>
+Title: <input type="text" name="title" required/><br>
 Content:<br>
-<input type="text" name="content" /><br>
-<input type="submit" /><br>
+<input type="text" name="content" required/><br>
+<input type="submit" value="Submit"/><br>
 </p>
 </form>
 </div>
@@ -52,7 +52,7 @@ Content:<br>
 <div id="blog_right">
 <form name="login_form" action="php/login.php" method="post">
 <p id="login_p">
-<label id="login_label">User: </label> <input id="login_input" type="text" name="user" required>
+<label id="login_label">User:</label> <input id="login_input" type="text" name="user" required>
 </p>
 <p id="login_p">
 <label id="login_label">Password:</label> <input id="login_input" type="password" name="pwd" required>
