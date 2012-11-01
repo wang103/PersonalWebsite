@@ -32,7 +32,6 @@ if (!$con) {
 }
 mysql_select_db("TianyiBlog", $con);
 
-
 include 'php/load_blog.php';
 
 mysql_close($con);
@@ -62,6 +61,8 @@ else {
 <div id="blog_right">
 <!--If logged in, show user info instead of login form-->
 <?php
+session_start();
+
 if(isset($_SESSION['USER_NAME']) && !empty($_SESSION['USER_NAME'])) {
 	if ($_SESSION['IS_ADMIN'] == 1) {
 		$identity = "Admin";
