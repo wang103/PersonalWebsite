@@ -40,8 +40,9 @@ mysql_close($con);
 
 <!--If admin, set up the new blog entry-->
 <form action="php/insert_blog.php" method="post">
-<p>Title: <input type="text" name="title" /></p>
-<p>Content:<br>
+<p>
+Title: <input type="text" name="title" /><br>
+Content:<br>
 <input type="text" name="content" /><br>
 <input type="submit" /><br>
 </p>
