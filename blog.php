@@ -38,7 +38,12 @@ include 'php/load_blog.php';
 mysql_close($con);
 ?>
 
-<!--If admin, set up the new blog entry-->
+<!--If admin, show the new blog entry-->
+<?php
+session_start();
+
+if(isset($_SESSION['IS_ADMIN']) && !empty($_SESSION['IS_ADMIN'])) {
+	echo '
 <form action="php/insert_blog.php" method="post">
 <p>
 Title: <input type="text" name="title" required/><br>
@@ -46,10 +51,37 @@ Content:<br>
 <input type="text" name="content" required/><br>
 <input type="submit" value="Submit"/><br>
 </p>
-</form>
+</form>';
+}
+else {
+	echo '<p>Only admin can write new blogs.</p>';
+}
+?>
 </div>
 
 <div id="blog_right">
+<!--If logged in, show user info instead of login form-->
+<?php
+if(isset($_SESSION['USER_NAME']) && !empty($_SESSION['USER_NAME'])) {
+	if ($_SESSION['IS_ADMIN'] == 1) {
+		$identity = "Admin";
+	} else {
+		$identity = "Regular User";
+	}
+	
+	echo '
+<form name="logout_form" action="php/logout.php" method="post">
+<p id="login_p">
+<label id="login_label">User:</label> ' . $_SESSION['USER_NAME'] . '
+</p>
+<p id="login_p">' . $identity .
+'</p>
+<p id="login_p" align="center">
+<input type="submit" value="Logout">
+</p>';
+}
+else {
+	echo '
 <form name="login_form" action="php/login.php" method="post">
 <p id="login_p">
 <label id="login_label">User:</label> <input id="login_input" type="text" name="user" required>
@@ -60,7 +92,9 @@ Content:<br>
 <p id="login_p" align="center">
 <input type="submit" value="Submit">
 </p>
-</form>
+</form>';
+}
+?>
 </div>
 
 <!--Footer-->
