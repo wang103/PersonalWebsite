@@ -40,7 +40,7 @@ if ($start_page + 6 <= $max_pages) {
 	$end_page = $start_page + 6;
 } else {
 	$end_page = $max_pages;
-	
+
 	$leftover = $start_page + 6 - $max_pages;
 	$start_page -= $leftover;
 	if ($start_page < 1) {
