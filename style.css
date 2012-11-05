@@ -23,6 +23,11 @@ li{float:left;}
 	background-color:#09F;
 }
 
+#page_item {
+	text-align:center;
+	padding:5px;
+}
+
 body {background-color:#CCC;}
 p {color:black;font-size:120%}
 img {margin-right:10px;}
