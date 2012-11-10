@@ -19,6 +19,8 @@ if(!get_magic_quotes_gpc()) {
 $qry = "SELECT UserName,IsAdmin FROM User WHERE UserName='" . $user . "' AND Password='" . md5($_POST['pwd']) . "'";
 $login_result = mysql_query($qry);
 
+mysql_close($con);
+
 # Store authentication in session.
 if(mysql_num_rows($login_result) > 0) {
 	# Regenerate session ID to prevent session fixation attacks
@@ -34,12 +36,11 @@ if(mysql_num_rows($login_result) > 0) {
 	session_write_close();
 
 	header("location: ../blog.php");
-	exit();
+	die();
 } else {
 	# Login failed
 	header("location: login_failed.php");
-	exit();
+	die();
 }
 
-mysql_close($con);
 ?>

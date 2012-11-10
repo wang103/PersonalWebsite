@@ -17,5 +17,5 @@ if (!mysql_query($sql, $con)) {
 mysql_close($con);
 
 header("location: ../blog.php");
-exit();
+die();
 ?>

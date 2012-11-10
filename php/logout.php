@@ -6,5 +6,5 @@
 	unset($_SESSION['IS_ADMIN']);
 
 	header("location: ../blog.php");
-	exit();
+	die();
 ?>
