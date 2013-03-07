@@ -1,5 +1,6 @@
 <?php
 # Start session.
+session_save_path('/home/content/49/10017049/html/tmp/sessions');
 session_start();
 
 $con = mysql_connect('50.63.108.129', 'TianyiBlog', 'Progr001!');

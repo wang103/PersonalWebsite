@@ -39,6 +39,7 @@ mysql_close($con);
 
 <!--If admin, show the new blog entry-->
 <?php
+session_save_path('/home/content/49/10017049/html/tmp/sessions');
 session_start();
 
 if(isset($_SESSION['IS_ADMIN']) && !empty($_SESSION['IS_ADMIN'])) {
